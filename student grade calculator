@@ -1,0 +1,46 @@
+import java.util.Scanner;
+import java.util.*;
+public class Main {
+    public static void marksandgrades() {
+      int[] marks = new int[6];
+      int sum = 0, i;
+      float average;
+      Scanner scan = new Scanner(System.in);
+      for (i = 0; i < 6; i++) {
+        System.out.println("enter the " + (i + 1) + "th subject mark:");
+        marks[i] = scan.nextInt();
+      }
+      for (i = 0; i < 6; i++)
+        sum += marks[i];
+      average = sum / 6;
+      System.out.println("*** Marks & grades of student ***");
+      System.out.println("subject 1:" + marks[0]);
+      System.out.println("subject 2:" + marks[1]);
+      System.out.println("subject 3:" + marks[2]);
+      System.out.println("subject 4:" + marks[3]);
+      System.out.println("subject 5:" + marks[4]);
+      System.out.println("subject 6:" + marks[5]);
+      System.out.println("total marks: " + sum);
+      System.out.println("average percentage:" + average + "%");
+      System.out.println("grade of the student =");
+      if (average >= 90) {
+        System.out.println("O");
+      } else if (average >= 80 && average < 90) {
+        System.out.println("A+");
+      } else if (average >= 70 && average < 80) {
+        System.out.println("A");
+      } else if (average >= 60 && average < 70) {
+        System.out.println("B+");
+      } else if (average >= 45 && average < 60) {
+        System.out.println("B");
+      } else {
+        System.out.println("F");
+      }
+    }
+
+    public static void main(String args[]) {
+      Main a = new Main();
+      a.marksandgrades();
+
+    }
+  }
